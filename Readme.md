@@ -1,3 +1,6 @@
+Description : Ensemble de données sur les maladies cardiaques, permettant de prédire la présence d'une maladie cardiaque chez un patient.
+Source : UCI Machine Learning Repository.
+
 age: age in years
 sex: sex (1 = male; 0 = female)
 cp: chest pain type -- Value 0: typical angina -- Value 1: atypical angina -- Value 2: non-anginal pain -- Value 3: asymptomatic
@@ -30,7 +33,7 @@ Ca : nombre de gros vaisseaux (0-3) colorés par fluoroscopie
 Thal : 0 = normal ; 1 = défaut fixe ; 2 = défaut réversible et l'étiquette
 Condition : 0 = pas de maladie, 1 = maladie
 
-Analyse de la dataset :
+ANALYSE ET EXPLORATION DES DONNEES :
 
 Analyse de la forme :
 La target : condition
@@ -58,3 +61,11 @@ Analyse de la relation variable-target :
     Relation oldpeak/thalach-target :
         On remarque plus de cas positif avec thalac > 140 et oldpeak  > 1
 
+
+PREPROCESSING :
+    -Importation de sklearn et les différents module pour le preprocessing
+    -Création des datasets (trainset et testset ) pour l'entraînement du model et le test 
+    -La creation des fonctions preprocessing et evaluation pour la preprocessing et l'evaluation des performances du model 
+    -Lors de l'evaluation on remarque que le model de RandomForestClassifier du module ensemble de sklearn présente plus un bonne adaptation par rapport aux autres...
+    -Elimination des variables moins importantes : 'sex','fbs','restecg','exang','slope' (Création de la fonction imputation pour gerer)
+    -Utiisation d'une pipeline : Pas de grand changement au niveau du val score (une légère amélioration sur la courbe d'apprentissage)
