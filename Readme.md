@@ -69,3 +69,4 @@ PREPROCESSING :
     -Lors de l'evaluation on remarque que le model de RandomForestClassifier du module ensemble de sklearn présente plus un bonne adaptation par rapport aux autres...
     -Elimination des variables moins importantes : 'sex','fbs','restecg','exang','slope' (Création de la fonction imputation pour gerer)
     -Utiisation d'une pipeline : Pas de grand changement au niveau du val score (une légère amélioration sur la courbe d'apprentissage)
+    -Maintenant on essaye une autre methode en utilisant le selectKeyBest avec f_classif (nous nous limiteraons touours à 10 variables) : amelioration evidentes (moins d'erreur du modele)
